@@ -1,1 +1,242 @@
-Hello World
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Shaizeen Aga - University of Michigan</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+  		<script src="assets/js/jquery.min.js"></script>
+  		<script src="assets/js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" href="images/zFavicon.png" type="image/png"/>
+	</head>
+	<body>
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">About Me</a></li>
+					<li><a href="#work">Projects</a></li>
+					<li><a href="#publications">Publications</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="documents/Shaizeen_Aga_Resume_Tech.pdf">CV</a></li>
+				</ul>
+			</nav>
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u 12u(mobile)">
+							<span class="image fit"><img src="images/shaiz.jpg" alt="" /></span>
+						</div>
+						<div class="8u 12u(mobile)">
+							<header>
+								<h1>&#161;Hola! I'm <strong>Shaizeen Aga</strong>.</h1>
+							</header>
+							<p style="font-size:large;"> I am a PhD student at <a href="https://www.umich.edu/">University of Michigan, Ann Arbor</a>. 
+							I work with Prof.<a href="http://web.eecs.umich.edu/~nsatish/">Satish Narayanasamy</a> and I am part of 
+							<a href="https://www.eecs.umich.edu/celab/">Computer Engineering Lab</a>. My under-graduate alma mater is 
+							College of Engineering, Pune, India. <br/> <br/>
+							My current research focus is on near data computing where I am designing energy efficient architectures exploiting the near 							    data computing paradigm.
+							I am also passionate about parallel computer architecture and parallel computing and making multi-core systems more 
+							accessible 
+							to programmers. My past projects in this area have been about making more intuitive memory models possible and 
+							efficient runtimes for multi-core systems. </p>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Work -->
+			<div class="wrapper style1">
+				<article id="work">
+					<header>
+						<h2>Projects</h2>
+					</header>
+					<div class="container">
+						<div class="panel-group" id="accordion">
+							<div class="panel panel-default">
+						    		<div class="panel-heading">
+						      			<h4 class="panel-title">
+						        		<a data-toggle="collapse" data-parent="#accordion" href="#cilk">
+										Exposing optimistic concurrency to Cilk Scheduler</a>
+						      			</h4>
+						    		</div>
+						    		<div id="cilk" class="panel-collapse collapse">
+						      			<div class="panel-body">
+									This project was part of my Internship with High Performance Computing group at 
+									<a href="http://www.pnnl.gov/">Pacific Northwest National Labs</a>, Richland, WA. 
+									I was mentored here by <a href="http://hpc.pnl.gov/people/sriram/"> Sriram Krishnamoorthy</a>.<br/>
+									I worked here on improving the efficiency of <a href="http://supertech.csail.mit.edu/cilk/">Cilk</a>
+									multi-core runtime system. Cilk programming
+									language makes it easy for programmers to express parallelism though for certain class of algorithms,
+									synchronization in Cilk programs tends to be over-constrained leading to poor performance. By employing
+									optimistic concurrency I improved the performance of Cilk multithreaded runtime system by upto 1.9X.
+									</div>
+						    		</div>
+						    	</div>
+							<div class="panel panel-default">
+						    		<div class="panel-heading">
+						      			<h4 class="panel-title">
+						        		<a data-toggle="collapse" data-parent="#accordion" href="#fence">
+										zFENCE: Data-less Coherence for Efficient Fences</a>
+						      			</h4>
+						    		</div>
+						    		<div id="fence" class="panel-collapse collapse">
+						      			<div class="panel-body">
+									A significant fraction of fence overhead is caused by stores that are waiting for data from 
+									memory. In this project, by introducing the capability to grant coherence permission for a store much earlier 
+									than servicing its data from memory, I could complete stores faster and as such complete fences faster. 
+									I showed that this simple optimization eliminates fence overhead in a majority of scenarios, and helps 
+									bridge the performance gap between SC and TSO memory models for a low design cost.
+						    			</div>
+						  		</div>
+						    	</div>
+							<div class="panel panel-default">
+						    		<div class="panel-heading">
+						      			<h4 class="panel-title">
+						        		<a data-toggle="collapse" data-parent="#accordion" href="#eecs570">
+									ReactiveSC: Speculatively relaxing memory consistency model contraints using dynamic classification
+									of cache blocks	</a>
+						      			</h4>
+						    		</div>
+						    		<div id="eecs570" class="panel-collapse collapse">
+						      			<div class="panel-body">
+									This project was part of my Parallel Computer Architecture (EECS 570) course project at 
+									University of Michigan, Ann Arbor. Using dynamic classification of cache blocks, we relaxed memory consistency 
+									model constraints to improve performance of Sequentially Consistent hardware. <br/>
+									This project earned <strong>Top Grade in Winter 2012 class of EECS 570!</strong> <br/>
+									<a href="documents/ReactiveSC_EECS570W12_report.pdf">Project Report</a><br/>
+									<a href="documents/ReactiveSC_EECS570W12_poster.pptx">Poster</a><br/>
+						    			</div>
+						  		</div>
+						  	</div>
+							<div class="panel panel-default">
+						    		<div class="panel-heading">
+						      			<h4 class="panel-title">
+						        		<a data-toggle="collapse" data-parent="#accordion" href="#eka">
+										Eka: P6 microarchitecture based core</a>
+						      			</h4>
+						    		</div>
+						    		<div id="eka" class="panel-collapse collapse">
+						      			<div class="panel-body">
+									This project was part of my Computer Architecture (EECS 470) course project at University of 
+									Michigan, Ann Arbor. <br/>
+									I implemented the memory interface of the core (load queue, store queue, post retirement store buffer) and 
+									host of other components like Reorder Buffer, Instruction Buffer. I also designed and implemented an Adaptive 
+									Instruction Prefetcher which gained us significant performance benefits.</br>
+									This processor design earned <strong>Top Grade in Fall 2011 class of EECS 470!</strong><br/>
+									<a href="documents/EKA_EECS470F11_report.pdf">Project Report<a/>
+						    			</div>
+						  		</div>
+						  	</div>
+							<div class="panel panel-default">
+						    		<div class="panel-heading">
+						      			<h4 class="panel-title">
+						        		<a data-toggle="collapse" data-parent="#accordion" href="#cuda">
+										Undergraduate Research Project at NVIDIA Graphics Pvt. Ltd</a>
+						      			</h4>
+						    		</div>
+						    		<div id="cuda" class="panel-collapse collapse">
+						      			<div class="panel-body">
+									I worked here on NVIDIA’s parallel computing platform CUDA and ported a True motion estimation algorithm on 
+									the CUDA platform. The challenges involved here were: understanding true motion estimation and CUDA 
+									architecture and doing a literature survey to pick an algorithm which could be efficiently ported onto 
+									the CUDA platform.
+						    			</div>
+						  		</div>
+						  	</div>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Publications -->
+			<div class="wrapper style2">
+				<article id="publications">
+					<header>
+						<h2>Conference Papers</h2>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="12u 12u(mobile)">
+								<article class="box style2">
+									<h4>Efficiently Enforcing Strong Memory Ordering in GPUs</h4>
+									<p  style="font-size:1em;"> Abhayendra Singh, <strong>Shaizeen Aga</strong>, 
+									 Satish Narayanasamy. <br/>To appear in the 48th Annual 
+									 IEEE/ACM International Symposium on Microarchitecture (<strong>MICRO'15</strong>), December 2015.
+									 [<a href="">link</a>]
+									</p>
+	
+									<h4>CilkSpec: optimistic concurrency for Cilk</h4>
+									<p style="font-size:1em;"> <strong>Shaizeen Aga</strong>, Sriram Krishnamoorthy, 
+									 Satish Narayanasamy. <br/> In International Conference for High Performance Computing, Networking, 
+									 Storage and Analysis (<strong>SC'15</strong>), Austin, TX, November 2015. 
+									 [<a href="http://dl.acm.org/citation.cfm?doid=2807591.2807597">link</a>]
+									</p>
+									<h4>zFence: Data-less Coherence for Efficient Fences</h4>
+									<p  style="font-size:1em;"> <strong>Shaizeen Aga</strong>, Abhayendra Singh,
+									 Satish Narayanasamy. <br/> In 29th International Conference on Supercomputing (<strong>ICS'15</strong>), 
+									 June 2015
+									 [<a href="http://doi.acm.org/10.1145/2751205.2751211">link</a>]
+									</p>
+								</article>
+							</div>
+						</div>
+					</div>
+					<header>
+						<h2>Patents</h2>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="12u 12u(mobile)">
+								<article class="box style2">
+									<h4>Ordering constraint management within coherent memory systems</h4>
+									<p  style="font-size:1em;"> <strong>Shaizeen Aga</strong>, Abhayendra Singh, 
+									 Satish Narayanasamy. <br/>US Patent App. 14/169,594, 2014</p>
+								</article>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Contact -->
+			<div class="wrapper style3">
+				<article id="contact" class="container">
+					<header>
+						<h2>Contact Details</h2>
+					</header>
+					<header><h3>Email</h3></header>
+					<p>shaizeen [at] umich [dot] edu</p>
+					<header><h3>Office</h3></header>
+					<p>4844 BBB, 2260 Hayward, <br/>
+					   University of Michigan,Ann Arbor, <br/>
+					   MI,USA 48109-2121.
+					</p>
+					<header><h3>Find me on</h3></header>
+					<p>
+						<a href="http://dblp.uni-trier.de/pers/hd/a/Aga:Shaizeen">DBLP</a><br/>
+						<a href="https://scholar.google.com/citations?user=0HX3B94AAAAJ&hl=en">Google Scholar</a><br/>
+						<a href="https://www.linkedin.com/in/shaizeenaga">LinkedIn</a><br/>
+						<a href="https://shaizeen.wordpress.com/">Wordpress</a><br/>
+					</p>
+					<hr/>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; 2013 Shaizeen Aga, All Rights Reserved.</li>
+							<!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+						</ul>
+					</footer>
+				</article>
+			</div>
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/skel-viewport.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
