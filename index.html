@@ -95,21 +95,21 @@ and two orders of magnitude memory bandwidth overhead that prior works incur. Th
 						    		<div id="computecache" class="panel-collapse collapse">
 						      			<div class="panel-body">
 										<p style="font-size:100%;">
-										<b> Problem context: </b> We continue to generate nearly 2.5 quintillion bytes per day and as such, the amounts of data that needs analyzing will only increase with time.  
+										<b> Problem context: </b> We continue to generate nearly 2.5 quintillion bytes per day and as such, the amounts of data that needs analyzing will only increase with time.  <br/> 
 
 <b> Problem statement: </b> Conventional architectures are not equipped to tackle this data deluge. They expend disproportionately large fraction of time and energy in moving 
 data over cache hierarchy, and in instruction processing, as compared to the actual computation. Further, applications which tackle massive data tend to have high degree 
-of data parallelism which the narrow vector units in conventional processors fail to exploit.
+of data parallelism which the narrow vector units in conventional processors fail to exploit. <br/> 
 
 <b> My solution: </b> In this work, I proposed the Compute Cache architecture which transforms caches into active compute units capable of performing in-place computation. This 
 transformation unlocks massive data-parallel compute capabilities (~100X wrt SIMD processor), as a cache is comprised of many smaller sub-arrays each of which can compute in 
 parallel. This also reduces data movement energy over the cache hierarchy as we can perform computation in cache without moving it towards the processor. Realizing 
 Compute Caches brings to forth several challenges like efficient data placement, orchestration of concurrent computation in caches, ensuring soft error reliability 
-and more which I address efficiently.
+and more which I address efficiently. <br/> 
 
 <b> Result impact: </b> My study indicates that Compute Cache enabled operations can deliver significant throughput (54X) and total energy savings (14X). For a suite of data-centric 
 applications, Compute Caches deliver performance improvement of 1.9X and energy savings of 2.4X while being limited by Amdahl’s law. Future studies to include a richer set 
-of operations that can be performed in-place in cache will, I believe, help accelerate larger fractions of applications and close the gap between potential and realized improvements.
+of operations that can be performed in-place in cache will, I believe, help accelerate larger fractions of applications and close the gap between potential and realized improvements. <br/> 
 
 This work was awarded best demo at Center for Future Architectures Research (CFAR) Annual Workshop 2016 which showcased nearly 50 projects in computer architecture related 
 topics from several leading institutions. Also, this work won the 1st place at University of Michigan CSE Graduate Students Honors Competition; a yearly competition which 
@@ -133,12 +133,12 @@ recognizes research of broad interest and exceptional quality.
 My mentor here was <a href="http://hpc.pnl.gov/people/sriram/"> Sriram Krishnamoorthy</a>.<br/>
 
 <b> Problem context: </b> Recursive parallel programming models such as Cilk strive to make it easy for programmers to express parallel programs by enabling a simple divide-and-conquer 
-programming model.  
+programming model.  <br/> 
 <b> Problem statement: </b> Recursive work partitioning can impose additional constraints on concurrency than is implied by the true dependencies in a program thus affecting 
-performance. 
+performance. <br/> 
 <b> My solution: </b> I address Cilk's inefficiency using a speculation-based approach to alleviate the concurrency constraints imposed by such recursive parallel programs. 
 We augment the Cilk runtime infrastructure to support speculative execution and implement a predictor to accurately learn and identify increasing degrees of speculation 
-opportunities to relax extraneous concurrency constraints. 
+opportunities to relax extraneous concurrency constraints. <br/> 
 <b> Result impact: </b> I demonstrated that speculative relaxation of concurrency constraints can deliver considerable performance gains (1.6X on 30 cores) over baseline 
 Cilk without compromising the easy of programming that Cilk affords.
 
@@ -157,14 +157,14 @@ Cilk without compromising the easy of programming that Cilk affords.
 						      			<div class="panel-body">
 										<p style="font-size:100%;">
 									<b> Problem context: </b>  With ubiquity of multi-core systems, a crucial debate is picking the memory model for such systems. Memory model decides the assumptions a programmer can make and 
-hence the ease of programmability. 
+hence the ease of programmability. <br/> 
 <b> Problem statement: </b> Sequential consistency (SC) is arguably the most intuitive memory model but manufacturers instead chose to support relaxed models which allow more performance 
 optimizations. Supporting these relaxed models necessitates a fence instruction which is used to implement memory accesses to synchronization variables. The cost of these 
 fence instructions remains prohibitively expensive. Efficient fences will not only help improve the performance of today’s concurrent algorithms, but could also pave the 
-way for the adoption of SC model. 
+way for the adoption of SC model. <br/> 
 <b>  My solution: </b> In this work, I observed that a significant fraction of fence overhead is caused by stores that are waiting for data from memory. To exploit this observation,
 I proposed the zFence architecture for efficiently implementing a fence by introducing the capability to grant coherence permission for a 
-store much earlier than servicing its data from memory. Using this efficient fence instruction we can enable a low-overhead SC design.
+store much earlier than servicing its data from memory. Using this efficient fence instruction we can enable a low-overhead SC design.<br/> 
 <b>  Result impact:  </b> Using zFence, I demonstrated that sequential consistent multi-core system is possible for a mere overhead of 2.93%. 
 										</p>
 						    			</div>
