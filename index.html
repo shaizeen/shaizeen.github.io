@@ -66,11 +66,21 @@
 						    		</div>
 						    		<div id="invisimem" class="panel-collapse collapse">
 						      			<div class="panel-body">
-									In this work, I implemented a low-overhead hardware design 
-									that provides strong defenses against memory bus side-channels using compute capable 3D
-									memories wherein we harness logic layer close to memory to implement cryptographic primitives.
-										This design is one to two orders of magnitude lower in performance, space, energy, and memory 
-										bandwidth overhead compared to prior solutions.
+										<b> Problem context: </b> Ensuring privacy of code and data while executing software on a computer physically owned and maintained by an untrusted party is an open challenge.
+
+<b> Problem statement: </b> Low-overhead hardware design which provides defenses against memory bus side-channel remains elusive. Current solutions employ Oblivious 
+RAM (ORAM) to ensure address confidentiality and incur severe overheads (memory bandwidth~100X, performance~10X). Addressing memory bus side-channel 
+completely also requires addressing data integrity, freshness and timing channel which only further add to these overheads.  
+
+<b> My solution: </b> I implemented a low-overhead hardware design, InvisiMem, in which we employ 3D stacked memory with a logic layer wherein we implement cryptographic primitives to 
+provide efficient defenses against memory bus side-channel. Under InvisiMem, the secure processor can send encrypted addresses over the untrusted memory 
+bus without having to rely on ORAM. Additional measures are required for address confidentiality which we identify and implement efficiently. We also 
+propose an efficient freshness solution (without Merkle trees as in prior works) by establishing secure communication channel between processor and 
+memory and using process isolation checks. Finally, we also employ constant heart-beat packets for mitigating memory bus timing channel.
+
+<b> Result impact: </b>  InvisiMem incurs about 14.21% performance and no memory bandwidth overhead as compared to an order of magnitude performance 
+and two orders of magnitude memory bandwidth overhead that prior works incur. These ultra-low overheads will I believe pave the way 
+for production systems to solve memory bus side channel efficiently.
 									</div>
 						    		</div>
 						    	</div>
