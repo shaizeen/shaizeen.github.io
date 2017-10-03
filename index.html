@@ -97,7 +97,8 @@ and two orders of magnitude memory bandwidth overhead that prior works incur. Th
 						    		<div id="computecache" class="panel-collapse collapse">
 						      			<div class="panel-body">
 										<p style="font-size:90%;">
-										<b> Problem context: </b> We continue to generate nearly 2.5 quintillion bytes per day and as such, the amounts of data that needs analyzing will only increase with time.  <br/> 
+<img src="documents/compute_cache.png" alt="In-place computation in caches" style="float:right;width:318px;height:335px;border:2px solid black">
+<b> Problem context: </b> We continue to generate nearly 2.5 quintillion bytes per day and as such, the amounts of data that needs analyzing will only increase with time.  <br/> 
 
 <b> Problem statement: </b> Conventional architectures are not equipped to tackle this data deluge. They expend disproportionately large fraction of time and energy in moving 
 data over cache hierarchy, and in instruction processing, as compared to the actual computation. Further, applications which tackle massive data tend to have high degree 
@@ -131,6 +132,7 @@ recognizes research of broad interest and exceptional quality.
 						    		<div id="cilk" class="panel-collapse collapse">
 						      			<div class="panel-body">
 										<p style="font-size:90%;">
+	<img src="documents/cilkspec.png" alt="Speculative elision of syncs in Cilk" style="float:right;width:192px;height:242px;border:2px solid black">
 									This project was part of my Internship with High Performance Computing group at <a href="http://www.pnnl.gov/">Pacific Northwest National Labs</a>, Richland, WA. 
 My mentor here was <a href="http://hpc.pnl.gov/people/sriram/"> Sriram Krishnamoorthy</a>.<br/>
 
@@ -158,7 +160,8 @@ Cilk without compromising the easy of programming that Cilk affords.
 						    		<div id="fence" class="panel-collapse collapse">
 						      			<div class="panel-body">
 										<p style="font-size:90%;">
-									<b> Problem context: </b>  With ubiquity of multi-core systems, a crucial debate is picking the memory model for such systems. Memory model decides the assumptions a programmer can make and 
+	<img src="documents/zfence.png" alt="Decoupling coherence permission from data to complete stores faster" style="float:right;width:198px;height:246px;border:2px solid black">
+	<b> Problem context: </b>  With ubiquity of multi-core systems, a crucial debate is picking the memory model for such systems. Memory model decides the assumptions a programmer can make and 
 hence the ease of programmability. <br/> 
 <b> Problem statement: </b> Sequential consistency (SC) is arguably the most intuitive memory model but manufacturers instead chose to support relaxed models which allow more performance 
 optimizations. Supporting these relaxed models necessitates a fence instruction which is used to implement memory accesses to synchronization variables. The cost of these 
