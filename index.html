@@ -175,6 +175,31 @@ store much earlier than servicing its data from memory. Using this efficient fen
 						    			</div>
 						  		</div>
 						    	</div>
+							<div class="panel panel-default">
+						    		<div class="panel-heading">
+						      			<h4 class="panel-title">
+						        		<a data-toggle="collapse" data-parent="#accordion" href="#scgpu">
+										Stronger Memory Models for GPUs</a>
+						      			</h4>
+						    		</div>
+						    		<div id="scgpu" class="panel-collapse collapse">
+						      			<div class="panel-body">
+										<p style="font-size:90%;">
+	<b> Problem statement: </b> Picking an intuitive memory model is an important question for GPUs for they are now widely 
+											used to write general purpose parallel programs. </br>
+
+<b> Problem statement: </b> Inspite of its simplicity, manufacturers do not implement Sequential consistency (SC) 
+and instead chose to support relaxed models which allow more performance optimizations. </br>
+
+<b> Solution: </b> In this work, I collaborated with fellow graduate student Abhayendra Singh to investigate memory model 
+implications for GPU’s wherein we propose a GPU-specific non-speculative SC design that takes advantage of high spatial 
+locality and temporally private data in GPU applications to bring down SC overhead. </br>
+ 
+<b> Result impact:</b> Our GPU-specific SC design shows that SC can also be enabled for GPUs for a minimal overhead. 
+										</p>
+									</div>
+						    		</div>
+						    	</div>
 						</div>
 					</div>
 					<header>
